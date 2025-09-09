@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 💸 Transactions System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple transactions management system where you can add **incoming** or **outgoing** transactions.  
+It features a main transactions table and a modal to add new transactions.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Main Transactions Table**  
+<img width="1710" height="923" alt="image" src="https://github.com/user-attachments/assets/6f6d45ef-7595-4ad6-91de-f24581e8bf36" />
 
-## Expanding the ESLint configuration
+**Add Transaction Modal**  
+<img width="692" height="668" alt="image" src="https://github.com/user-attachments/assets/ca6c1fc6-b722-4cea-9d1a-a811a31b91f4" />
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- View all transactions in a clean table.
+- Add new transactions (incoming or outgoing).
+- Powered by a `json-server` to simulate a backend.
+
+---
+
+## 🚀 Installation and execution
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+git clone https://github.com/Cleber-Severo/dt-money
+cd ./dt-money 
+npm install 
+npm run dev 
+npm run dev:server (mock backend routes)
 ```
